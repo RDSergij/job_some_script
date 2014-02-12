@@ -1,15 +1,15 @@
-jQuery(function($) {
+jQuery(function($) { // Клік кнопки
     $(document.body).ready(function(){        
             $("#reload_count").click(function()
             {
-				user_online();
+				user_online(); 
             });        
     });
 });
 
-setInterval("user_online", 5000);
-user_online();
-function user_online() {	
+setInterval("user_online", 5000); // Інтервал 5 секунд
+user_online(); // Перший запуск
+function user_online() {	// Асинхроне оновлення 
 	$.ajax({
 		type: "GET",
 		url: 'user_online.php',
