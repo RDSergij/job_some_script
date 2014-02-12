@@ -16,6 +16,8 @@ foreach ($temp_array as $temp_item) {
 		$point[$temp2_array[0]] = $temp2_array[1]; // Формуємо допоміжну матрицю із зв'язкою ключів категорій-підкатегорій подібно як в MySQL
 }
 
+asort($point);
+
 tree($category, $point); // Викликаємо головну функцію
 
 
