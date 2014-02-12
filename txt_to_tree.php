@@ -21,7 +21,7 @@ asort($point);
 tree($category, $point); // Викликаємо головну функцію
 
 
-function tree($category, $point, $id = 0, $level = 0) { // Рекурсивна функція, яка ходить по допоміжній матриці і виводить назви із матриці категорій
+function tree(&$category, &$point, $id = 0, $level = 0) { // Рекурсивна функція, яка ходить по допоміжній матриці і виводить назви із матриці категорій
 	foreach ($point as $key=>$value) {
 		if ($value == $id) {
 			echo space($level).$category[$key]."<br>";
