@@ -7,7 +7,7 @@ jQuery(function($) { // Клік кнопки
     });
 });
 
-setInterval("user_online", 5000); // Інтервал 5 секунд
+setInterval("user_online", 5000); // Интервал 5 секунд
 user_online(); // Перший запуск
 function user_online() {	// Асинхроне оновлення 
 	$.ajax({

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Test2</title>
+  </head>
+  <body>
+    <div id="raduga">
+		Произвольный текст :)
+	</div>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script>
+		color = new Array('(255, 0, 0)', '(255, 127, 0)', '(255, 255, 0)', '(0, 255, 0)', '(0, 0, 255)', '(75, 0, 130)', '(143, 0, 255)'); // Цвета радуги
+		var color_set = 'rgb' + color[0];
+		index = 0;
+		action = "+";
+		$("#raduga").css("color", color_set);
+		setInterval(raduga, 2000); // Интервал 4 секунд
+		
+		function raduga() {		// Меняем цвет в одну и потом в другую сторону	
+			if (action == "+") ++index;
+				else --index;
+			if (index<0) {
+				action = "+";
+				++index;
+			}
+			if (index>7) {
+				action = "-";
+				--index;
+			}
+			var color_set = 'rgb' + color[index];
+			$("#raduga").css("color", color_set);			
+		} 
+	</script>
+	
+  </body>
+</html>
